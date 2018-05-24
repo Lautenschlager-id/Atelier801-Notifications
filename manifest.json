@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+	"name": "Atelier801 Notifications",
+	"description": "Get notified of mentions and replies",
+	"version": "1.0",
+  "icons": {
+    "128": "images/icon128.png",
+    "48": "images/icon48.png"
+  },
+  "browser_action": {
+    "default_title": "Notifications",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "24": "images/icon24.png",
+      "32": "images/icon32.png"
+    }
+  },
+	"content_scripts": [{
+		"matches": ["https://atelier801.com/*"],
+		"js": ["jquery-3.3.1.js", "content.js"],
+		"run_at": "document_start"
+	}]
+}
